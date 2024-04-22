@@ -1,0 +1,7 @@
+default_location                = "northeurope"
+root_id                         = "alzetnic"
+root_name                       = "alz-etnic"
+root_parent_management_group_id = ""
+subscription_id_connectivity    = "0074c563-68d6-496c-9c3e-edb088794ae8"
+subscription_id_identity        = "9d923c47-1aa2-4fc9-856f-16ca53e97b76"
+subscription_id_management      = "c916841c-459e-4bbd-aff7-c235ae45f0dd"
