@@ -1,0 +1,26 @@
+{
+    "appteam1-sandbox": {
+      "policy_assignments": ["Enforce-ALZ-Sandbox"],
+      "policy_definitions": [],
+      "policy_set_definitions": [],
+      "role_definitions": [],
+      "archetype_config": {
+        "parameters": {
+          "Enforce-ALZ-Sandbox": {
+            "listOfResourceTypesNotAllowed": [
+                "microsoft.network/expressroutecircuits",
+                "microsoft.network/expressroutegateways",
+                "microsoft.network/expressrouteports",
+                "microsoft.network/virtualwans",
+                "microsoft.network/virtualhubs",
+                "microsoft.network/vpngateways",
+                "microsoft.network/p2svpngateways",
+                "microsoft.network/vpnsites",
+                "microsoft.network/virtualnetworkgateways"
+              ]
+          }
+        },
+        "access_control": {}
+      } 
+    }
+  }
