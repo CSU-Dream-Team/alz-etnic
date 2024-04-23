@@ -1,4 +1,12 @@
 locals {
+  archetype_config_overrides = {
+    sandboxes = {
+      appteam1-sandbox = {
+        enforcement_mode = {
+          Enforce-Alz-Sandbox  = false
+        }
+      }
+    }
     landing-zones = {
       enforcement_mode = {
         Audit-AppGW-WAF         = false
@@ -19,3 +27,4 @@ locals {
       }
     }
   }
+}
