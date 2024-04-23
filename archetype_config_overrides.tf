@@ -2,7 +2,7 @@ locals {
   archetype_config_overrides = {
     sandboxes = {
         enforcement_mode = {
-          enforce-alz-sandbox  = false
+          Enforce-Alz-Sandbox  = false
         }
     }
     landing-zones = {
