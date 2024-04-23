@@ -59,7 +59,17 @@ custom_landing_zones = {
     #     access_control = {}
     #   }
     # }
-
+    "${var.root_id}-sandboxes" = {
+      display_name               = "Sandboxes"
+      parent_management_group_id = "${var.root_id}-sandboxes"
+      subscription_ids           = []
+      archetype_config = {
+        archetype_id   = "sandboxes"
+        parameters     = {
+        }
+        access_control = {}
+      }
+    }
 }
   providers = {
     azurerm              = azurerm
