@@ -15,9 +15,8 @@ module "enterprise_scale" {
   subscription_id_connectivity = var.subscription_id_connectivity
   subscription_id_identity     = var.subscription_id_identity
   subscription_id_management   = var.subscription_id_management
-  archetype_config_overrides = local.archetype_config_overrides
+  archetype_config_overrides   = local.archetype_config_overrides
   library_path   = "${path.root}/lib"
-
 
 custom_landing_zones = {
     "${var.root_id}-online-example-1" = {
@@ -39,23 +38,11 @@ custom_landing_zones = {
         archetype_id = "customer_online"
         parameters = {
           Deny-Resource-Locations = {
-            listOfAllowedLocations = ["northeurope","westeurope","swedencentral" ]
+            listOfAllowedLocations = ["northeurope","westeurope" ]
           }
           Deny-RSG-Locations = {
-            listOfAllowedLocations = ["northeurope","westeurope","swedencentral" ]
+            listOfAllowedLocations = ["northeurope","westeurope" ]
           }
-        }
-        access_control = {}
-      }
-    }
-
-    "${var.root_id}-sandboxes-example-1" = {
-      display_name               = "${upper(var.root_id)} AppTeam 1 Sandbox"
-      parent_management_group_id = "${var.root_id}-sandboxes"
-      subscription_ids           = []
-      archetype_config = {
-        archetype_id   = "appteam1-sandbox"
-        parameters     = {
         }
         access_control = {}
       }
