@@ -1,0 +1,15 @@
+{
+    "exclude_es_landing_zones": {
+      "policy_assignments": [
+        "Deny-Priv-Esc-AKS",
+        "Deny-Privileged-AKS"
+      ],
+      "policy_definitions": [],
+      "policy_set_definitions": [],
+      "role_definitions": [],
+      "archetype_config": {
+        "parameters": {},
+        "access_control": {}
+      }
+    }
+  }
