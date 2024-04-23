@@ -61,7 +61,7 @@ custom_landing_zones = {
     # }
     "${var.root_id}-sandboxes" = {
       display_name               = "Sandboxes"
-      parent_management_group_id = "${var.root_id}-sandboxes"
+      parent_management_group_id = "${var.root_id}"
       subscription_ids           = []
       archetype_config = {
         archetype_id   = "sandboxes"
