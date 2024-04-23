@@ -1,5 +1,5 @@
 {
-    "appteam1-sandbox": {
+    "sandboxes": {
       "policy_assignments": ["Enforce-ALZ-Sandbox"],
       "policy_definitions": [],
       "policy_set_definitions": [],
