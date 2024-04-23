@@ -49,18 +49,6 @@ custom_landing_zones = {
       }
     }
 
-    "${var.root_id}-sandboxes-example-1" = {
-      display_name               = "${upper(var.root_id)} AppTeam 1 Sandbox"
-      parent_management_group_id = "${var.root_id}-sandboxes"
-      subscription_ids           = []
-      archetype_config = {
-        archetype_id   = "appteam1-sandbox"
-        parameters     = {
-        }
-        access_control = {}
-      }
-    }
-
 }
   providers = {
     azurerm              = azurerm
