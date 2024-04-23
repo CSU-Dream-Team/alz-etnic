@@ -9,15 +9,13 @@
           "Deny-Resource-Locations": {
             "listOfAllowedLocations": [
               "northeurope",
-              "westeurope",
-              "swedencentral"
+              "westeurope"           
             ]
           },
           "Deny-RSG-Locations": {
             "listOfAllowedLocations": [
               "northeurope",
-              "westeurope",
-              "swedencentral"
+              "westeurope"
             ]
           }
         },
