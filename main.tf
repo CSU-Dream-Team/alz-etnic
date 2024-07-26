@@ -71,6 +71,37 @@ custom_landing_zones = {
       }
     }
 }
+
+module "hub_and_spoke" {
+  source  = "Azure/caf-enterprise-scale/azurerm/modules/connectivity"
+  version = "~> 5.2.0"
+
+  root_parent_id = module.enterprise_scale.root_id
+  location       = var.default_location
+  subscription_id_connectivity = var.subscription_id_connectivity
+
+  hub_network_config = {
+    address_space = ["10.0.0.0/16"]
+    subnets = {
+      gateway_subnet = { address_prefix = "10.0.1.0/24" }
+      firewall_subnet = { address_prefix = "10.0.2.0/24" }
+      default_subnet = { address_prefix = "10.0.3.0/24" }
+    }
+  }
+
+  spoke_networks = [
+    {
+      name            = "spoke1"
+      address_space   = ["10.1.0.0/16"]
+      subscription_id = var.spoke1_subscription_id
+    },
+    {
+      name            = "spoke2"
+      address_space   = ["10.2.0.0/16"]
+      subscription_id = var.spoke2_subscription_id
+    }
+  ]
+}
   providers = {
     azurerm              = azurerm
     azurerm.connectivity = azurerm.connectivity
